@@ -1,0 +1,8 @@
+import { dashboardSeed } from '#services/reporting/dashboard_seed'
+import type { HttpContext } from '@adonisjs/core/http'
+
+export default class DashboardController {
+  async index({ inertia }: HttpContext) {
+    return inertia.render('dashboard', dashboardSeed)
+  }
+}
